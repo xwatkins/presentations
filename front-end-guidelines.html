@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Front-End style guides</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Front-end style guides</h1>
+					<p>
+						<small><a href="http://xavwatk.in">Xavier Watkins</a> / <a href="http://twitter.com/xwatkins">@xwatkins</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>What is a style guide?</h2>
+					<ul>
+						<li>Code standards document</li>
+						<li>Visual language (typography, colours, ...)</li>
+						<li>Sometimes called pattern library</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Visual language</h2>
+					<img src="http://designmodo.com/wp-content/uploads/2014/09/Style-Guides.jpg" alt="">
+				</section>
+
+				<section>
+					<h2>Pattern library</h2>
+					<img src="img/bootstrap-buttons.png" alt="">
+				</section>
+
+				<section>
+					<h2>Why do we need a style guide?</h2>
+					<ul>
+						<li>Cleaner code</li>
+						<li>Consistency (code / visual)</li>
+						<li>Time saving</li>
+						<li>Avoid CSS mountain</li>
+						<li>Easier to test (layout)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Some examples</h2>
+					<ul>
+					 	<li><a href="http://www.nhsidentity.nhs.uk/">NHS Brand guidelines</a></li>
+					 	<li><a href="https://tfl.gov.uk/info-for/suppliers-and-contractors/design-standards?intcmp=4530">TFL design standards</a></li>
+					 	<li><a href="http://www.bbc.co.uk/gel">BBC GEL</a></li>
+					 	<li><a href="https://www.mozilla.org/en-US/styleguide/">Mozilla style guide</a></li>
+					 	<li><a href="https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html">Apple Human Interface Guidelines</a></li>
+					 	<li><a href="https://www.google.com/design/spec/material-design/introduction.html#">Google Material design</a></li>
+				 	</ul>
+				</section>
+
+				<section>
+					<h2>Making our own</h2>
+					<ol>
+						<li>Identify elements and components to be added</li>
+						<li>Start developping base styles for core elements</li>
+						<li>Add components which override base styles (search boxes, messages, ...)</li>
+						<li>Add layout and slot components into place</li>
+					</ol>
+					<p>Document code practices: semantic names, ...</p>
+				</section>
+
+				<section>
+					<h2>Starting points</h2>
+					<ul>
+						<li><a href="http://barebones.paulrobertlloyd.com/">Barebones</a> - An initial directory setup, style guide and pattern primer</li>
+						<li><a href="https://github.com/twbs/bootstrap-sass">Bootstrap SCSS</a>
+							<ul>
+								<li>Responsive grid, extensive pattern library</li>
+								<li>Mature: over 137,500 websites use it</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Integration with UUW</h2>
+					<p>Developped independently from web application.</p><p>Built minified CSS updated when required</p>
+					<p>UUW would still have a stylesheet, but should be kept to a minimum.</p>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<p><a href="https://24ways.org/2011/front-end-style-guides/">https://24ways.org/2011/front-end-style-guides/</a></p>
+					<p><a href="http://alistapart.com/article/creating-style-guides">http://alistapart.com/article/creating-style-guides</a></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
