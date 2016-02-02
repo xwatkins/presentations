@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FV</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="fontello.css">
+	<link rel="stylesheet" href="pp_main.css">
+</head>
+<body style="background-color:#fff">
+	<div id="feature-viewer"></div>
+	<script src="featuresviewer.js"/>
+	<script>
+		console.log('ran');
+	</script>
+	<script>
+	var yourDiv = document.getElementById('feature-viewer');
+	var biojs_vis_proteinFeaturesViewer = require('biojs-vis-proteinfeaturesviewer');
+	console.log(biojs_vis_proteinFeaturesViewer);
+	var instance = new biojs_vis_proteinFeaturesViewer({
+	  el: yourDiv, 
+	  uniprotacc : 'P05067'
+	});
+	</script>
+
+</body>
+</html>
